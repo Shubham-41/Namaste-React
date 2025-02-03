@@ -275,5 +275,3 @@ npx parcel build React.html
 - suppose our app is majorly used in USA so we have to use such browsers should be compatible acc to that.
 
 - [Parcel Documentation](https://parceljs.org/)
-
-- 
