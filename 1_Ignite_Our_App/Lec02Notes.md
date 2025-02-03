@@ -20,3 +20,5 @@
 - It is Standard Repository for all the packages. It is one of the Biggest Package Manager. Any Package that we need to include in our project we can use npm. All the packages/utilities/libaries are come from npm and npm basically manages that for u in our project.
 
 - We will use jest for testing
+
+- 
