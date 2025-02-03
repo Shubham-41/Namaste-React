@@ -1,3 +1,9 @@
 /node_modules 
 # ṇow it will be ignored and will not push to github or production.
 
+/.parcel-cache
+
+/dist
+
+# Files which can be regenerated are not needed to push it on git
+

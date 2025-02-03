@@ -1,3 +1,11 @@
+// we need to import our react and react-dom from node_modules
+
+import React from "react"; // this react refers from node_modules react
+
+import ReactDOM from "react-dom/client";
+
+// ReactDOM is used to come from react-dom but now it comes from
+
 // Writing React Code
 
 // Creating an Element in React
@@ -95,7 +103,11 @@ root.render(SiblingParent);
 
 const ParentSiblings = React.createElement("div", { id: parent }, [
   React.createElement("div", { id: "Child1" }, [
-    React.createElement("h1", {}, "Hello I'm H1 Tag From Child 01"),
+    React.createElement(
+      "h1",
+      {},
+      "Hello I'm H1 Tag From Child 01 Namste React"
+    ),
     React.createElement("h2", {}, "Hello I'm H2 Tag From Child 01"),
   ]),
   React.createElement("div", { id: "Child2" }, [
