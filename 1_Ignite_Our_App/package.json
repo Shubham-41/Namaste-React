@@ -11,5 +11,8 @@
     "url": "https://github.com/Shubham-41/Namaste-React.git"
   },
   "author": "Shubham Lipane",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.13.3"
+  }
 }
