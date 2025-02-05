@@ -160,3 +160,65 @@ function Wrapper({ Component }) {
 - **`{<TitleComponent></TitleComponent>}`** → Full JSX element with children.
 
 Let me know if you want a practical project-based explanation!
+
+Your changes are **spot on**! 🚀 You have correctly fixed the issue with **component composition** by returning a **JSX element** from the `Sq` component instead of a raw value (`Number * Number`). This ensures that `Sq` can be used as a nested component inside `Cube`.
+
+---
+
+### **Your Corrected Code:**
+
+```jsx
+let Number = 5;
+
+const Sq = () => {
+  // Returning JSX element instead of a plain value
+  return <span>{Number * Number}</span>;
+};
+
+const Cube = () => {
+  return (
+    <div>
+      <h3>
+        Square of {Number} = <Sq /> {/* Correct component composition */}
+      </h3>
+      <h1>Practise Component Composition</h1>
+    </div>
+  );
+};
+
+root.render(<Cube />);
+```
+
+---
+
+### **`{TitleComponent}` vs `{<TitleComponent />}` vs `{<TitleComponent></TitleComponent>}`**
+
+1. **`{TitleComponent}`**
+
+   - This is a **reference to the component function/class itself**.
+   - Useful when passing the component as a prop or in higher-order components.
+   - **Example:**
+     ```jsx
+     const Wrapper = ({ Component }) => <Component />;
+     <Wrapper Component={Sq} />;
+     ```
+
+2. **`{<TitleComponent />}`**
+
+   - This is a **JSX element**, representing the rendered output of `TitleComponent`.
+   - Can be used directly inside JSX to render the component’s output.
+   - **Example:**
+     ```jsx
+     <div>{<Sq />}</div>
+     ```
+
+3. **`{<TitleComponent></TitleComponent>}`**
+   - This is the **full form of the JSX element**, especially useful when you need to pass children to the component.
+   - **Example:**
+     ```jsx
+     <TitleComponent>
+       <p>This is a child element inside TitleComponent.</p>
+     </TitleComponent>
+     ```
+
+---
