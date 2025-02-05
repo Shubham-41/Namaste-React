@@ -169,6 +169,12 @@ Namaste React Using JSX
 
 # React Components
 
+- Everything is a component in a react
+
+- header,title,search bar,list of cards, everything in react is component.
+
+-
+
 # Types of Components
 
     1. Class Based Components -- Old Way to write code
@@ -177,6 +183,128 @@ Namaste React Using JSX
 ---
 
 # Functional Components :-
+
+- Just a normal Javascript Function
+
+- It is Normal JS Function Which returns some piece of JSX elements.
+
+- JSX is a React Element.
+
+- Functional Component is also called it as JavaScript Function which returns a React Element.
+
+- **Whenever u will create a any react component name with a capital letter otherwise u will get an error, its a react way to understand that it is a component.**
+
+- Rendering Functional Component
+
+```JS
+root.render(<HeadingComponent/>);
+```
+
+- Bcoz of this Babel understands the functional component.
+
+## Component Composition
+
+```JS
+
+const Title = () => {
+  return <h1 className="head" tabIndex="5">
+    Namaste React Usign JSX (From Title Functional Component)
+  </h1>;
+};
+
+const HeadingComponent = () => {
+  return (
+    <div id="container">
+      <Title/>
+      <h1>Namaste react Functional Component</h1>
+    </div>
+  );
+};
+
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+
+root.render(<HeadingComponent />); // rendering functioanl component
+
+
+```
+
+- **If we want to write any Javascript expression inside a JSX we can write it in {curly braces}.**
+
+```JS
+
+const number = 10000;
+
+const HeadingComponent = () => {
+  return (
+    <div id="container">
+      <Title />
+      {number /* Writing JS Expression */}
+      <h3>{number} JS Expression</h3>
+      <h1>Namaste react Functional Component</h1>
+    </div>
+  );
+};
+
+// We can also add functional component in following way
+
+//  <Title> </Title>
+
+```
+
+# Put a React Element Inside a React Component
+
+```JS
+
+// here title2 is a normal js variable
+const title2 = (
+  <h1 className="head" tabIndex="5">
+    Nmaste React Using JSX Title2
+  </h1>
+);
+
+const Title = () => {
+  return <h1 className="head" tabIndex="5">
+    Namaste React Usign JSX (From Title Functional Component)
+  </h1>;
+};
+
+const element = <span>React Element</span>;
+
+const HeadingComponent3 = () => {
+  return (
+    <div id="container">
+      {Title()}
+      {title2}
+      {element}
+      <h1 className="heading">Writing React Element Inside a JSX</h1>
+    </div>
+  );
+};
+
+root.render(<HeadingComponent3 />); // rendering functioanl component
+
+
+```
+
+---
+
+---
+
+# Cross-site Scripting Attack (XSS)
+
+- Suppose we do an api call and it is malicious api beacause of this attack attacker will execute its some code in user browser can fetch some informations
+
+- but
+
+- **JSX takes care of such injection attacks, JSX will escape this**
+
+---
+
+---
+
+---
 
 # Homework
 
